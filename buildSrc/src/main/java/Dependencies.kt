@@ -7,8 +7,8 @@ object Apps {
 }
 
 object Versions {
-    const val gradle = "3.5.0"
-    const val kotlin = "1.3.50"
+    const val gradle = "4.0.0"
+    const val kotlin = "1.3.72"
     const val appcompat = "1.0.2"
     const val coreKotlin = "1.1.0"
     const val constraintVersion = "1.1.3"
