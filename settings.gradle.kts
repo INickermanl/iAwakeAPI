@@ -1,2 +1,2 @@
 rootProject.name = "KotlinDSL"
-include (":app")
+include (":presentation-module")
