@@ -46,7 +46,8 @@ android {
         implementation(Libs.appcompat)
         implementation(Libs.coreKotlin)
         implementation(Libs.daggerAndroid)
-        implementation(Libs.daggerSupport)
+        implementation(Libs.daggerCompiler)
+        implementation(Dependencies.cicerone)
         implementation(Libs.AnnotationProcessors.daggerProcessor)
         implementation(Libs.constraintVersion)
         testImplementation(TestLibs.junit)
@@ -61,6 +62,19 @@ android {
 
     buildFeatures {
         dataBinding = true
+    }
+
+    packagingOptions {
+        exclude ("META-INF/proguard/androidx-annotations.pro")
+        exclude ("META-INF/DEPENDENCIES")
+        exclude ("META-INF/gradle/incremental.annotation.processors")
+        exclude ("META-INF/LICENSE")
+        exclude ("META-INF/LICENSE.txt")
+        exclude ("META-INF/license.txt")
+        exclude ("META-INF/NOTICE")
+        exclude ("META-INF/NOTICE.txt")
+        exclude ("META-INF/notice.txt")
+        exclude ("META-INF/ASL2.0")
     }
 
     kapt {

@@ -25,7 +25,8 @@ object Libs {
     const val kotlin = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}"
     const val appcompat = "androidx.appcompat:appcompat:${Versions.appcompat}"
     const val coreKotlin = "androidx.core:core-ktx:${Versions.coreKotlin}"
-    const val daggerAndroid =  "com.google.dagger:dagger-android:${Versions.daggerVersion}"
+    const val daggerAndroid =  "com.google.dagger:dagger:${Versions.daggerVersion}"
+    const val daggerCompiler =  "com.google.dagger:dagger-compiler:${Versions.daggerVersion}"
     const val daggerSupport = "com.google.dagger:dagger-android-support:${Versions.daggerVersion}"
 
     const val constraintVersion = "androidx.constraintlayout:constraintlayout:${Versions.constraintVersion}"

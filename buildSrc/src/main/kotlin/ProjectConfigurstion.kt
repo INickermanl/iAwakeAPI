@@ -109,7 +109,7 @@ object Dependencies {
     const val moxyAndroidx = "com.github.moxy-community:moxy-androidx:$moxyVersion"
     const val moxyKtx = "com.github.moxy-community:moxy-ktx:$moxyVersion"
     const val inputMask = "com.redmadrobot:input-mask-android:6.0.0"
-    const val cicerone = "ru.terrakok.cicerone:cicerone:5.0.0"
+    const val cicerone = "ru.terrakok.cicerone:cicerone:5.1.1"
     const val keyboardHeightProvider = "com.hold1:keyboardheightprovider:0.0.9"
     const val palette = "androidx.palette:palette:1.0.0"
     const val threetenbp = "org.threeten:threetenbp:1.4.1"
