@@ -13,6 +13,7 @@ object Versions {
     const val appcompat = "1.0.2"
     const val coreKotlin = "1.1.0"
     const val constraintVersion = "2.0.0"
+    const val daggerVersion = "2.29.1"
 
     /* test */
     const val junit = "4.12"
@@ -24,7 +25,14 @@ object Libs {
     const val kotlin = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}"
     const val appcompat = "androidx.appcompat:appcompat:${Versions.appcompat}"
     const val coreKotlin = "androidx.core:core-ktx:${Versions.coreKotlin}"
+    const val daggerAndroid =  "com.google.dagger:dagger-android:${Versions.daggerVersion}"
+    const val daggerSupport = "com.google.dagger:dagger-android-support:${Versions.daggerVersion}"
+
     const val constraintVersion = "androidx.constraintlayout:constraintlayout:${Versions.constraintVersion}"
+
+    object AnnotationProcessors{
+        const val daggerProcessor = "com.google.dagger:dagger-android-processor:${Versions.daggerVersion}"
+    }
 
 }
 
