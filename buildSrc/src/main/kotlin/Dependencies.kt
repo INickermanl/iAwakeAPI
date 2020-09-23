@@ -1,17 +1,18 @@
 object Apps {
-    const val compileSdk = 29
+    const val compileSdk = 28
+    const val buildToolsVersion = "30.0.1"
     const val minSdk = 21
-    const val targetSdk = 29
+    const val targetSdk = 28
     const val versionCode = 1
     const val versionName = "1.0.0"
 }
 
 object Versions {
-    const val gradle = "4.0.0"
-    const val kotlin = "1.3.72"
+    const val gradle = "4.0.1"
+    const val kotlin = "1.4.0"
     const val appcompat = "1.0.2"
     const val coreKotlin = "1.1.0"
-    const val constraintVersion = "1.1.3"
+    const val constraintVersion = "2.0.0"
 
     /* test */
     const val junit = "4.12"

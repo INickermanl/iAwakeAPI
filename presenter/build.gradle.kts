@@ -1,11 +1,4 @@
-import Apps.versionCode
-import Apps.versionName
-import org.apache.commons.logging.LogFactory.release
-import org.gradle.internal.impldep.com.amazonaws.PredefinedClientConfigurations.defaultConfig
-import org.jetbrains.kotlin.konan.properties.Properties
-import org.jetbrains.kotlin.storage.CacheResetOnProcessCanceled
-import org.jetbrains.kotlin.storage.CacheResetOnProcessCanceled.enabled
-import com.android.build.gradle.internal.api.BaseVariantOutputImpl
+
 
 plugins {
     id("com.android.application")
@@ -43,14 +36,6 @@ android {
         isQuiet = true
     }
 
-    packagingOptions {
-        exclude("META-INF/notice.txt")
-    }
-
-    buildTypes {
-
-    }
-
     testOptions {
         unitTests.isReturnDefaultValues = true
     }
@@ -70,7 +55,6 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-
 
     buildFeatures {
         dataBinding = true
