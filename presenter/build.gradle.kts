@@ -47,6 +47,7 @@ android {
         implementation(Libs.coreKotlin)
         implementation(Libs.daggerAndroid)
         implementation(Libs.daggerCompiler)
+        implementation(Libs.timber)
         implementation(Dependencies.cicerone)
         implementation(Libs.AnnotationProcessors.daggerProcessor)
         implementation(Libs.constraintVersion)

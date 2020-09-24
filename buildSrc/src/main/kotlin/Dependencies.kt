@@ -14,6 +14,7 @@ object Versions {
     const val coreKotlin = "1.1.0"
     const val constraintVersion = "2.0.0"
     const val daggerVersion = "2.29.1"
+    const val timberVersion = "4.7.1"
 
     /* test */
     const val junit = "4.12"
@@ -28,6 +29,7 @@ object Libs {
     const val daggerAndroid =  "com.google.dagger:dagger:${Versions.daggerVersion}"
     const val daggerCompiler =  "com.google.dagger:dagger-compiler:${Versions.daggerVersion}"
     const val daggerSupport = "com.google.dagger:dagger-android-support:${Versions.daggerVersion}"
+    const val timber = "com.jakewharton.timber:timber:${Versions.timberVersion}"
 
     const val constraintVersion = "androidx.constraintlayout:constraintlayout:${Versions.constraintVersion}"
 
