@@ -10,6 +10,7 @@ import com.nickerman.test3.di.modules.PresentationModule
 import com.nickerman.test3.fragments.LoginFragment
 import com.nickerman.test3.fragments.MainFragment
 import com.nickerman.test3.presenter.LoginPresenter
+import com.nickerman.test3.presenter.MainPresenter
 import dagger.Component
 import javax.inject.Singleton
 
@@ -28,4 +29,5 @@ interface ApplicationComponent {
     fun inject(loginFragment: LoginFragment)
     fun inject(loginFragment: LoginPresenter)
     fun inject(mainFragment: MainFragment)
+    fun inject(mainFragment: MainPresenter)
 }
