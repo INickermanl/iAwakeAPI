@@ -7,13 +7,13 @@ import com.nickerman.test3.di.DaggerApplicationComponent
 import com.nickerman.test3.di.modules.ApplicationModule
 import timber.log.Timber
 
-class MyApplication : Application() {
+class AbstractApplication : Application() {
 
     lateinit var currentActivity: Activity
 
     val mainComponent: ApplicationComponent by lazy {
         DaggerApplicationComponent.builder()
-            .applicationModule(ApplicationModule(this@MyApplication))
+            .applicationModule(ApplicationModule(this@AbstractApplication))
             .build()
     }
 
@@ -25,7 +25,7 @@ class MyApplication : Application() {
     }
 
     companion object {
-        lateinit var instance: MyApplication
+        lateinit var instance: AbstractApplication
             private set
     }
 }

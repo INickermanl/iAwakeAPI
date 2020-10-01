@@ -1,4 +1,4 @@
-package com.nickerman.test3.base.navigator
+package com.example.bl.common.navigation
 
 import ru.terrakok.cicerone.android.support.SupportAppScreen
 

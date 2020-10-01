@@ -11,6 +11,8 @@ object Versions {
     const val gradle = "4.0.1"
     const val kotlin = "1.4.0"
     const val appcompat = "1.0.2"
+    const val coroutineVersion = "1.3.9"
+    const val moxyVersion = "2.2.0"
     const val coreKotlin = "1.1.0"
     const val constraintVersion = "2.0.0"
     const val daggerVersion = "2.29.1"
@@ -30,8 +32,14 @@ object Libs {
     const val daggerCompiler =  "com.google.dagger:dagger-compiler:${Versions.daggerVersion}"
     const val daggerSupport = "com.google.dagger:dagger-android-support:${Versions.daggerVersion}"
     const val timber = "com.jakewharton.timber:timber:${Versions.timberVersion}"
-
+    const val coroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutineVersion"
+    const val coroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutineVersion"
     const val constraintVersion = "androidx.constraintlayout:constraintlayout:${Versions.constraintVersion}"
+    const val moxy = "com.github.moxy-community:moxy:$moxyVersion"
+    const val moxyCompiler = "com.github.moxy-community:moxy-compiler:$moxyVersion"
+    const val moxyAndroid = "com.github.moxy-community:moxy-android:$moxyVersion"
+    const val moxyAndroidx = "com.github.moxy-community:moxy-androidx:$moxyVersion"
+    const val moxyKtx = "com.github.moxy-community:moxy-ktx:$moxyVersion"
 
     object AnnotationProcessors{
         const val daggerProcessor = "com.google.dagger:dagger-android-processor:${Versions.daggerVersion}"

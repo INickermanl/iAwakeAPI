@@ -2,19 +2,21 @@ package com.nickerman.test3.fragments
 
 import android.os.Bundle
 import android.view.View
-import com.nickerman.test3.MyApplication
+import com.nickerman.test3.AbstractApplication
 import com.nickerman.test3.R
-import com.nickerman.test3.base.fragment.BaseFragment
-import com.nickerman.test3.presenter.MainPresenter
+import com.nickerman.test3.base.fragment.AbstractFragment
+import com.example.bl.common.mvp.main.MainPresenter
+import com.example.bl.common.mvp.main.view.MainView
 import kotlinx.android.synthetic.main.fragment_main.*
+import moxy.ktx.moxyPresenter
 import javax.inject.Inject
 
-class MainFragment @Inject constructor(): BaseFragment<MainPresenter>(R.layout.fragment_main) {
-    @Inject
-    override lateinit var presenter: MainPresenter
+class MainFragment @Inject constructor() : AbstractFragment<MainPresenter>(R.layout.fragment_main), MainView {
+
+    override val presenter: MainPresenter by moxyPresenter { presenterProvider.get() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        MyApplication.instance.mainComponent.inject(this)
+        AbstractApplication.instance.mainComponent.inject(this)
         super.onCreate(savedInstanceState)
     }
 

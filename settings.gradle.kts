@@ -1,5 +1,8 @@
 rootProject.name = "KotlinDSL"
 include(
     ":utils",
-    ":presenter"
+    ":presenter",
+    ":bl-common",
+    ":bl",
+    ":domain"
 )

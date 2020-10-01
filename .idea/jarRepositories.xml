@@ -66,5 +66,30 @@
       <option name="name" value="maven" />
       <option name="url" value="file:/$PROJECT_DIR$/lib/%22https:/jitpack.io%22" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven" />
+      <option name="name" value="maven" />
+      <option name="url" value="file:/$PROJECT_DIR$/domain/%22https:/jitpack.io%22" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven" />
+      <option name="name" value="maven" />
+      <option name="url" value="file:/$PROJECT_DIR$/test/%22https:/jitpack.io%22" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven" />
+      <option name="name" value="maven" />
+      <option name="url" value="file:/$PROJECT_DIR$/common/%22https:/jitpack.io%22" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven" />
+      <option name="name" value="maven" />
+      <option name="url" value="file:/$PROJECT_DIR$/bl/%22https:/jitpack.io%22" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven" />
+      <option name="name" value="maven" />
+      <option name="url" value="file:/$PROJECT_DIR$/bl-common/%22https:/jitpack.io%22" />
+    </remote-repository>
   </component>
 </project>
