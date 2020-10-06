@@ -28,6 +28,7 @@ dependencies{
     implementation(Libs.coroutinesAndroid)
     implementation(Dependencies.moxyAndroidx)
     implementation(Dependencies.moxy)
+    implementation(project(mapOf("path" to ":domain")))
     kapt(Dependencies.moxyCompiler)
     implementation(Dependencies.moxyKtx)
     implementation(Dependencies.moxyAndroid)

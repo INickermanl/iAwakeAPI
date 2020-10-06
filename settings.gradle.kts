@@ -1,8 +1,7 @@
 rootProject.name = "KotlinDSL"
 include(
-    ":utils",
-    ":presenter",
-    ":bl-common",
+    ":android-utils",
+    ":presentation",
     ":bl",
     ":domain"
 )

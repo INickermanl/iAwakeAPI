@@ -91,5 +91,15 @@
       <option name="name" value="maven" />
       <option name="url" value="file:/$PROJECT_DIR$/bl-common/%22https:/jitpack.io%22" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven" />
+      <option name="name" value="maven" />
+      <option name="url" value="file:/$PROJECT_DIR$/presentation/%22https:/jitpack.io%22" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven" />
+      <option name="name" value="maven" />
+      <option name="url" value="file:/$PROJECT_DIR$/android-utils/%22https:/jitpack.io%22" />
+    </remote-repository>
   </component>
 </project>
