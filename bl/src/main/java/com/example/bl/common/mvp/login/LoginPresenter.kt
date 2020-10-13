@@ -5,6 +5,7 @@ import com.example.bl.common.mvp.login.view.LoginView
 import com.example.bl.common.navigation.MainScreen
 import com.example.domain.Result
 import com.example.domain.Success
+import kotlinx.coroutines.*
 import moxy.InjectViewState
 import javax.inject.Inject
 
@@ -12,20 +13,19 @@ import javax.inject.Inject
 @InjectViewState
 class LoginPresenter @Inject constructor() : AbstractPresenter<LoginView>() {
 
-    fun navigateToMain() {
-        launchUnit {
-            viewState.showLoaderWithLock()
-            launchOnIO {
-                loadContacts()
-                launchUnit {
-                    viewState.hideLoaderWithLock()
-                    router.navigateTo(MainScreen())
-                }
-            }
+    private val scope = CoroutineScope(Dispatchers.IO)
+
+    fun navigateToMain() = launchUnit {
+        viewState.showLoaderWithLock()
+        scope.launch {
+            loadContacts()
         }
+        viewState.hideLoaderWithLock()
+        router.navigateTo(MainScreen())
     }
 
     private fun loadContacts(): Result<Boolean> {
+
         val list = arrayOfNulls<Int>(100_000)
         list.forEachIndexed { index, i ->
             println("${i?.javaClass} hello")
@@ -34,5 +34,10 @@ class LoginPresenter @Inject constructor() : AbstractPresenter<LoginView>() {
             }
         }
         return Success(false)
+    }
+
+    override fun onDestroy() {
+        if (scope.coroutineContext.isActive) scope.cancel()
+        super.onDestroy()
     }
 }

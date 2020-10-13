@@ -16,9 +16,11 @@ android {
         multiDexEnabled = true
         setProperty("archivesBaseName", "$applicationId-v$versionName($versionCode)")
         resConfigs("en")
-        ndk {
-            abiFilters("armeabi-v7a", "x86", "arm64-v8a", "x86_64")
-        }
+
+//        ndkPath
+//        ndk {
+//            abiFilters("armeabi-v7a", "x86", "arm64-v8a", "x86_64")
+//        }
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -53,6 +55,7 @@ android {
         implementation(Dependencies.moxyAndroid)
         implementation("com.neenbedankt.gradle.plugins:android-apt:1.4")
         implementation(Dependencies.moxy)
+        libraryList.forEach { implementation(it) }
         kapt(Dependencies.moxyCompiler)
         implementation(Dependencies.moxyKtx)
         implementation(Libs.timber)
