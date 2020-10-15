@@ -1,15 +1,15 @@
 object Apps {
-    const val compileSdk = 28
-    const val buildToolsVersion = "30.0.1"
+    const val compileSdk = 30
+    const val buildToolsVersion = "30.0.2"
     const val minSdk = 21
-    const val targetSdk = 28
+    const val targetSdk = 30
     const val versionCode = 1
     const val versionName = "1.0.0"
 }
 
 object Versions {
-    const val gradle = "4.0.1"
-    const val kotlin = "1.4.0"
+    const val gradle = "4.1.0"
+    const val kotlin = "1.4.10"
     const val appcompat = "1.0.2"
     const val coroutineVersion = "1.3.9"
     const val moxyVersion = "2.2.0"
@@ -17,6 +17,7 @@ object Versions {
     const val constraintVersion = "2.0.0"
     const val daggerVersion = "2.29.1"
     const val timberVersion = "4.7.1"
+    const val retrofitVersion = "2.9.0"
 
     /* test */
     const val junit = "4.12"
@@ -40,6 +41,9 @@ object Libs {
     const val moxyAndroid = "com.github.moxy-community:moxy-android:$moxyVersion"
     const val moxyAndroidx = "com.github.moxy-community:moxy-androidx:$moxyVersion"
     const val moxyKtx = "com.github.moxy-community:moxy-ktx:$moxyVersion"
+
+    const val scalarConverter = "com.squareup.retrofit2:converter-scalars:2.1.0"
+    const val scalar = "com.squareup.retrofit2:retrofit:2.1.0"
 
     object AnnotationProcessors{
         const val daggerProcessor = "com.google.dagger:dagger-android-processor:${Versions.daggerVersion}"

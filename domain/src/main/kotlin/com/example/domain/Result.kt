@@ -6,6 +6,8 @@ import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.toCollection
 
+interface UseCase
+
 sealed class Result<Res>
 class Failure<Res>(val e: Throwable) : Result<Res>()
 class Success<Res>(val response: Res) : Result<Res>()

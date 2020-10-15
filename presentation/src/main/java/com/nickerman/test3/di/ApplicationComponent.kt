@@ -1,10 +1,11 @@
 package com.nickerman.test3.di
 
-import com.nickerman.test3.activity.MainActivity
 import com.nickerman.test3.AbstractApplication
+import com.nickerman.test3.activity.MainActivity
 import com.nickerman.test3.base.navigator.NavigationSubComponent
 import com.nickerman.test3.di.modules.ApplicationModule
 import com.nickerman.test3.di.modules.NavigationModule
+import com.nickerman.test3.di.modules.UseCaseModule
 import com.nickerman.test3.fragments.LoginFragment
 import com.nickerman.test3.fragments.MainFragment
 import dagger.Component
@@ -14,7 +15,8 @@ import javax.inject.Singleton
 @Component(
     modules = [
         ApplicationModule::class,
-        NavigationModule::class]
+        NavigationModule::class,
+        UseCaseModule::class]
 )
 interface ApplicationComponent {
     val navigationSubComponentFactory: NavigationSubComponent.Factory

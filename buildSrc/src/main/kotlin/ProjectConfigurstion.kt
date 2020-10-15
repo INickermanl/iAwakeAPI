@@ -1,9 +1,7 @@
-import org.gradle.api.artifacts.dsl.RepositoryHandler
-import org.gradle.kotlin.dsl.maven
-
 const val projectVersion: String = "1.0"
-const val projectGroup: String = "ua.com.nickerman"
 const val kotlinVersion: String = "1.4.0"
+const val isWarningsAsErrorsConfig = true
+const val javaVersion = "1.8"
 
 object AndroidConfig {
     const val buildToolsVersion = "29.0.3"
@@ -12,16 +10,6 @@ object AndroidConfig {
     const val compileSdkVersion = 29
     val versionCode = "1"
     const val testInstRunner = "android.support.test.runner.AndroidJUnitRunner"
-    const val testAppId = "ua.com.cs.ifobs.mobile.test"
-}
-
-fun RepositoryHandler.configure() {
-    jcenter()
-    google()
-    maven("https://plugins.gradle.org/m2/")
-    maven("https://jitpack.io")
-    maven("https://kotlin.bintray.com/kotlinx")
-    maven("https://dl.bintray.com/crysis21/Android")
 }
 
 const val roomVersion = "2.2.5"
@@ -32,6 +20,8 @@ const val fragmentVersion = "1.2.3"
 const val retrofitVersion = "2.7.1"
 
 object Dependencies {
+    const val scalarConverter = "com.squareup.retrofit2:converter-scalars:2.1.0"
+    const val scalar = "com.squareup.retrofit2:retrofit:2.1.0"
     const val kotlin_jdk = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
     const val kotlin_serialization = "org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.20.0"
     const val kotlinReflect = "org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion"

@@ -17,8 +17,8 @@ import java.io.Serializable
 import javax.inject.Inject
 import javax.inject.Provider
 
-abstract class AbstractFragment<P : AbstractPresenter<*>>(@LayoutRes layoutId: Int) : MvpAppCompatFragment(layoutId),
-    CommonView {
+abstract class AbstractFragment<P : AbstractPresenter<*>>(@LayoutRes layoutId: Int) :
+    MvpAppCompatFragment(layoutId), CommonView {
 
     @Inject
     lateinit var presenterProvider: Provider<P>
@@ -28,13 +28,17 @@ abstract class AbstractFragment<P : AbstractPresenter<*>>(@LayoutRes layoutId: I
     protected lateinit var rootView: View
 
     override fun showLoaderWithLock() {
-        AbstractApplication.instance.currentActivity.rootView.findViewById<FrameLayout>(R.id.lockScreen).visible()
-        AbstractApplication.instance.currentActivity.rootView.findViewById<ProgressBar>(R.id.mainProgressBar).visible()
+        AbstractApplication.instance.currentActivity.rootView.findViewById<FrameLayout>(R.id.lockScreen)
+            .visible()
+        AbstractApplication.instance.currentActivity.rootView.findViewById<ProgressBar>(R.id.mainProgressBar)
+            .visible()
     }
 
     override fun hideLoaderWithLock() {
-        AbstractApplication.instance.currentActivity.rootView.findViewById<FrameLayout>(R.id.lockScreen).gone()
-        AbstractApplication.instance.currentActivity.findViewById<ProgressBar>(R.id.mainProgressBar).gone()
+        AbstractApplication.instance.currentActivity.rootView.findViewById<FrameLayout>(R.id.lockScreen)
+            .gone()
+        AbstractApplication.instance.currentActivity.findViewById<ProgressBar>(R.id.mainProgressBar)
+            .gone()
     }
 
     val arrayData: List<Serializable?> by lazy {

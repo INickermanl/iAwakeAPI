@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    compileSdkVersion(30)
+    compileSdkVersion(Apps.compileSdk)
 
     defaultConfig {
         minSdkVersion(Apps.minSdk)
@@ -16,9 +16,7 @@ android {
         multiDexEnabled = true
         setProperty("archivesBaseName", "$applicationId-v$versionName($versionCode)")
         resConfigs("en")
-        ndk {
-            abiFilters("armeabi-v7a", "x86", "arm64-v8a", "x86_64")
-        }
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -41,6 +39,9 @@ android {
     dependencies {
         implementation(project(":android-utils"))
         implementation(project(":domain"))
+        implementation(project(":data"))
+        implementation(project(":services"))
+        implementation(project(":bl"))
         implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
         implementation(Libs.kotlin)
         implementation(Libs.appcompat)
@@ -49,8 +50,13 @@ android {
         implementation(Libs.daggerCompiler)
         implementation(Libs.coroutinesCore)
         implementation(Libs.coroutinesAndroid)
+        implementation(Dependencies.retrofit)
+        implementation(Dependencies.retrofitGson)
+        implementation(Dependencies.scalarConverter)
+        implementation(Dependencies.scalar)
         implementation(Dependencies.moxyAndroidx)
         implementation(Dependencies.moxyAndroid)
+        libraryList.forEach { implementation(it) }
         implementation("com.neenbedankt.gradle.plugins:android-apt:1.4")
         implementation(Dependencies.moxy)
         kapt(Dependencies.moxyCompiler)
@@ -101,13 +107,23 @@ android {
 
     buildTypes {
         get("debug").apply {
-            buildConfigField("Boolean", "BEBUG_BUILD_TYPE", "true")
+            buildConfigField(
+                "String", "MEDIA_SERVICE_URL", "\"https://api.iawaketechnologies.com\""
+            )
+        }
+        get("debug").apply {
+            buildConfigField(
+                "String", "TEST_API", "\"http://kolyan-example.herokuapp.com\""
+            )
+        }
+        get("debug").apply {
+            buildConfigField("Boolean", "DEBUG_BUILD_TYPE", "true")
         }
         get("release").apply {
-            buildConfigField("Boolean", "BEBUG_BUILD_TYPE", "false")
+            buildConfigField("Boolean", "DEBUG_BUILD_TYPE", "false")
         }
     }
 }
-dependencies {
-    implementation(project(mapOf("path" to ":bl")))
-}
+//dependencies {
+//    implementation(project(mapOf("path" to ":bl")))
+//}

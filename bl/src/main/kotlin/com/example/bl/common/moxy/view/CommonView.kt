@@ -8,6 +8,5 @@ import moxy.viewstate.strategy.StateStrategyType
 interface CommonView : MvpView {
     fun showLoaderWithLock()
     fun hideLoaderWithLock()
-    fun todo(message: String = "") {
-    }
+    fun todo(message: String = "") {}
 }
