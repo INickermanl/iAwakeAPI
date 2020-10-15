@@ -6,8 +6,8 @@ buildscript {
         maven("https://kotlin.bintray.com/kotlinx")
     }
     dependencies {
-        classpath("com.android.tools.build:gradle:4.1.0")
-        classpath("org.jetbrainsbn.kotlin:kotlin-gradle-plugin:${Versions.kotlin}")
+        classpath("com.android.tools.build:gradle:${Versions.gradle}")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}")
     }
 }
 
