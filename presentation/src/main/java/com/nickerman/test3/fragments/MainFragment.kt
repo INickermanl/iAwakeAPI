@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.View
 import com.nickerman.test3.AbstractApplication
 import com.nickerman.test3.R
-import com.nickerman.test3.base.fragment.AbstractFragment
+import com.nickerman.test3.fragments.common.AbstractFragment
 import com.example.bl.common.mvp.main.MainPresenter
 import com.example.bl.common.mvp.main.view.MainView
 import kotlinx.android.synthetic.main.fragment_main.*

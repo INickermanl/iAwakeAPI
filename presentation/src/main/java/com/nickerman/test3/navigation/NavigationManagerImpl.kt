@@ -1,4 +1,4 @@
-package com.nickerman.test3.base.navigator
+package com.nickerman.test3.navigation
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
@@ -11,9 +11,13 @@ class NavigationManagerImpl @Inject constructor(
     private val fragmentProvider: FragmentProvider,
     activity: FragmentActivity,
     fragmentManager: FragmentManager,
-    containerId: Int
+    private val containerId: Int
 ) : SupportAppNavigator(activity, fragmentManager, containerId) {
     override fun createFragment(screen: SupportAppScreen): Fragment {
         return fragmentProvider.createFragment(screen)
     }
+
+    val currentFragment: Fragment?
+        get() = fragmentManager.findFragmentById(containerId)
+
 }

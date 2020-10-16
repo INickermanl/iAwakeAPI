@@ -1,11 +1,13 @@
 package com.nickerman.test3.activity
 
 import android.os.Bundle
+import androidx.fragment.app.DialogFragment
+import com.example.bl.common.navigation.BackButtonListener
 import com.example.bl.common.navigation.LoginScreen
 import com.nickerman.test3.AbstractApplication
 import com.nickerman.test3.R
-import com.nickerman.test3.base.AbstractActivity
-import com.nickerman.test3.base.navigator.NavigationManagerImpl
+import com.nickerman.test3.activity.common.AbstractActivity
+import com.nickerman.test3.navigation.NavigationManagerImpl
 import ru.terrakok.cicerone.NavigatorHolder
 import ru.terrakok.cicerone.commands.Replace
 import javax.inject.Inject
@@ -29,6 +31,17 @@ class MainActivity @Inject constructor() : AbstractActivity() {
         rootView = findViewById(R.id.rootView)
 
         navigator.applyCommands(arrayOf(Replace(LoginScreen())))
+    }
+
+    override fun onBackPressed() {
+        val fragment = navigator.currentFragment
+        if (fragment != null && fragment is BackButtonListener) {
+            if (!(fragment as BackButtonListener).onBackPressed()) {
+                super.onBackPressed()
+            }
+        } else {
+            super.onBackPressed()
+        }
     }
 
     override fun onResume() {

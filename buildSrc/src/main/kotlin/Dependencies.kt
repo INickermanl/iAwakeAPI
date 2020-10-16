@@ -10,7 +10,7 @@ object Apps {
 object Versions {
     const val gradle = "4.1.0"
     const val kotlin = "1.4.10"
-    const val appcompat = "1.0.2"
+    const val appcompat = "1.1.0"
     const val coroutineVersion = "1.3.9"
     const val moxyVersion = "2.2.0"
     const val coreKotlin = "1.1.0"

@@ -6,8 +6,8 @@ import com.example.domain.ErrorHandler
 import com.nickerman.test3.AbstractApplication
 import com.nickerman.test3.BuildConfig
 import com.nickerman.test3.ErrorHandlerImpl
-import com.nickerman.test3.base.navigator.FragmentProvider
-import com.nickerman.test3.base.navigator.FragmentProviderImpl
+import com.nickerman.test3.navigation.FragmentProvider
+import com.nickerman.test3.navigation.FragmentProviderImpl
 import dagger.Module
 import dagger.Provides
 import kotlinx.coroutines.CoroutineDispatcher

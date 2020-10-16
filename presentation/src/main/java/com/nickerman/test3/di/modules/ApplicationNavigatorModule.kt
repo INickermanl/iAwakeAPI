@@ -2,8 +2,8 @@ package com.nickerman.test3.di.modules
 
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
-import com.nickerman.test3.base.navigator.FragmentProvider
-import com.nickerman.test3.base.navigator.NavigationManagerImpl
+import com.nickerman.test3.navigation.FragmentProvider
+import com.nickerman.test3.navigation.NavigationManagerImpl
 import dagger.Module
 import dagger.Provides
 

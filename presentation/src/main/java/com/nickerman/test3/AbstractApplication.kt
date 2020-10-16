@@ -1,7 +1,7 @@
 package com.nickerman.test3
 
 import android.app.Application
-import com.nickerman.test3.base.AbstractActivity
+import com.nickerman.test3.activity.common.AbstractActivity
 import com.nickerman.test3.di.ApplicationComponent
 import com.nickerman.test3.di.DaggerApplicationComponent
 import com.nickerman.test3.di.modules.ApplicationModule

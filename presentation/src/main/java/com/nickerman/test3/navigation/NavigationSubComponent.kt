@@ -1,4 +1,4 @@
-package com.nickerman.test3.base.navigator
+package com.nickerman.test3.navigation
 
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager

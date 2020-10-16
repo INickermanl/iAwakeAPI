@@ -1,4 +1,4 @@
-package com.nickerman.test3.base.fragment
+package com.nickerman.test3.fragments.common
 
 import android.os.Bundle
 import android.view.View
@@ -11,7 +11,6 @@ import com.example.utils.gone
 import com.example.utils.visible
 import com.nickerman.test3.AbstractApplication
 import com.nickerman.test3.R
-import com.nickerman.test3.activity.MainActivity
 import moxy.MvpAppCompatFragment
 import java.io.Serializable
 import javax.inject.Inject
