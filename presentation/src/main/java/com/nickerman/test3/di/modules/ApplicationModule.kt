@@ -1,6 +1,7 @@
 package com.nickerman.test3.di.modules
 
 import android.content.Context
+import android.media.MediaPlayer
 import com.example.data.services.MediaServiceAPI
 import com.example.domain.ErrorHandler
 import com.nickerman.test3.AbstractApplication
@@ -54,5 +55,10 @@ class ApplicationModule(application: AbstractApplication) {
             .addConverterFactory(ScalarsConverterFactory.create())
             .addConverterFactory(GsonConverterFactory.create())
             .build().create(MediaServiceAPI::class.java)
+
+    @Provides
+    @Singleton
+    fun provideMediaPlayer(): MediaPlayer = MediaPlayer()
+
 
 }
