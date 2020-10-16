@@ -53,6 +53,8 @@ android {
         implementation(Dependencies.retrofit)
         implementation(Dependencies.retrofitGson)
         implementation(Dependencies.scalarConverter)
+        implementation(Dependencies.okhttpConnection)
+        implementation(Dependencies.okhttp)
         implementation(Dependencies.scalar)
         implementation(Dependencies.moxyAndroidx)
         implementation(Dependencies.moxyAndroid)
@@ -124,6 +126,3 @@ android {
         }
     }
 }
-//dependencies {
-//    implementation(project(mapOf("path" to ":bl")))
-//}

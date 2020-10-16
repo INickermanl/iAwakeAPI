@@ -1,10 +1,8 @@
 package com.nickerman.test3.di.modules
 
 import android.content.Context
-import com.example.data.services.MediaService
+import com.example.data.services.MediaServiceAPI
 import com.example.domain.ErrorHandler
-import com.example.services.impl.apis.MediaServices.MediaServiceImpl
-import com.google.gson.GsonBuilder
 import com.nickerman.test3.AbstractApplication
 import com.nickerman.test3.BuildConfig
 import com.nickerman.test3.ErrorHandlerImpl
@@ -41,19 +39,20 @@ class ApplicationModule(application: AbstractApplication) {
 
     @Provides
     @Singleton
-    fun provideRetrofit(): Retrofit {
-        val httpClient =  OkHttpClient.Builder()
+    fun provideOkHttpClient(): OkHttpClient =
+        OkHttpClient.Builder()
             .readTimeout(2, TimeUnit.MINUTES)
             .connectTimeout(2, TimeUnit.MINUTES)
             .build()
-        return Retrofit.Builder()
-            .baseUrl(BuildConfig.TEST_API)
+
+    @Provides
+    @Singleton
+    fun provideMediaServiceAPI(httpClient: OkHttpClient): MediaServiceAPI =
+        Retrofit.Builder()
+            .baseUrl(BuildConfig.MEDIA_SERVICE_URL)
             .client(httpClient)
             .addConverterFactory(ScalarsConverterFactory.create())
             .addConverterFactory(GsonConverterFactory.create())
-            .build()
-    }
+            .build().create(MediaServiceAPI::class.java)
 
-    @Provides
-    fun provideMediaService(service: MediaServiceImpl): MediaService = service
 }

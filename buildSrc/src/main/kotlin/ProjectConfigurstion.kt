@@ -25,7 +25,8 @@ object Dependencies {
     const val kotlin_jdk = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
     const val kotlin_serialization = "org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.20.0"
     const val kotlinReflect = "org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion"
-    const val coroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutineVersion"
+    const val coroutinesAndroid =
+        "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutineVersion"
     const val coroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutineVersion"
     const val crashlytics = "com.crashlytics.sdk.android:crashlytics:2.10.1"
     const val fragment = "androidx.fragment:fragment:$fragmentVersion"
@@ -47,6 +48,8 @@ object Dependencies {
     const val roomRuntime = "androidx.room:room-runtime:$roomVersion"
     const val roomCompiler = "androidx.room:room-compiler:$roomVersion"
     const val flexible = "eu.davidea:flexible-adapter:5.1.0"
+    const val okhttpConnection = "com.squareup.okhttp3:okhttp-urlconnection:3.4.1"
+    const val okhttp = "com.squareup.okhttp3:okhttp:4.9.0"
     const val flexibleUi = "eu.davidea:flexible-adapter-ui:1.0.0"
     const val touchImageView = "com.github.MikeOrtiz:TouchImageView:2.2.0"
     const val pageindicatorview = "com.romandanylyk:pageindicatorview:1.0.3"
@@ -59,7 +62,8 @@ object Dependencies {
     const val googleServicesBase = "com.google.android.gms:play-services-base:17.2.1"
     const val googleServicesIdentity = "com.google.android.gms:play-services-identity:17.0.0"
     const val googleServicesAuth = "com.google.android.gms:play-services-auth:18.0.0"
-    const val googleServicesAuthApiPhone = "com.google.android.gms:play-services-auth-api-phone:17.4.0"
+    const val googleServicesAuthApiPhone =
+        "com.google.android.gms:play-services-auth-api-phone:17.4.0"
     const val googleServicesMaps = "com.google.android.gms:play-services-maps:17.0.0"
     const val mapsUtils = "com.google.maps.android:android-maps-utils:0.6.2"
     const val slf4jAndroid = "com.arcao:slf4j-timber:3.1"

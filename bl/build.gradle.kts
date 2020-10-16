@@ -15,6 +15,7 @@ jacoco {
     toolVersion = "0.8.5"
 }
 dependencies{
+    implementation(project(":domain"))
     implementation(Dependencies.kotlinReflect)
     implementation(Dependencies.cicerone)
     implementation(Dependencies.kotlin_jdk)
@@ -28,7 +29,6 @@ dependencies{
     implementation(Libs.coroutinesAndroid)
     implementation(Dependencies.moxyAndroidx)
     implementation(Dependencies.moxy)
-    implementation(project(mapOf("path" to ":domain")))
     kapt(Dependencies.moxyCompiler)
     implementation(Dependencies.moxyKtx)
     implementation(Dependencies.moxyAndroid)
