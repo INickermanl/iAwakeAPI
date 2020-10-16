@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:itemCount="5"
-        tools:listitem="@layout/widget_program_list_item" />
+        tools:listitem="@layout/widget_play_list_item" />
 
     <include layout="@layout/empty_view" />
 </FrameLayout>

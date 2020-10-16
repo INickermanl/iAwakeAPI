@@ -7,8 +7,7 @@ import moxy.viewstate.strategy.SkipStrategy
 import moxy.viewstate.strategy.StateStrategyType
 
 
-@StateStrategyType(SkipStrategy::class)
-interface LoginView : CommonView {
-    @StateStrategyType(AddToEndSingleStrategy::class)
-    fun showList(mediaResponse: MediaResponse)
+@StateStrategyType(AddToEndSingleStrategy::class)
+interface ProgramListView : CommonView {
+    fun showList(mediaResponse: MediaResponse?)
 }

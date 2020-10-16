@@ -1,9 +1,8 @@
 package com.nickerman.test3.activity
 
 import android.os.Bundle
-import androidx.fragment.app.DialogFragment
 import com.example.bl.common.navigation.BackButtonListener
-import com.example.bl.common.navigation.LoginScreen
+import com.example.bl.common.navigation.ProgramListScreen
 import com.nickerman.test3.AbstractApplication
 import com.nickerman.test3.R
 import com.nickerman.test3.activity.common.AbstractActivity
@@ -30,7 +29,7 @@ class MainActivity @Inject constructor() : AbstractActivity() {
         setContentView(R.layout.activity_main)
         rootView = findViewById(R.id.rootView)
 
-        navigator.applyCommands(arrayOf(Replace(LoginScreen())))
+        navigator.applyCommands(arrayOf(Replace(ProgramListScreen())))
     }
 
     override fun onBackPressed() {

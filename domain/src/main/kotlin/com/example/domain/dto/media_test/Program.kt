@@ -1,5 +1,7 @@
 package com.example.domain.dto.media_test
 
+import com.example.domain.dto.CommonDTO
+
 data class Program(
     val _type: String? = null,
     val banner: Banner? = null,
@@ -12,4 +14,4 @@ data class Program(
     val isFree: Boolean? = null,
     val title: String? = null,
     val tracks: List<Track>? = null
-)
+): CommonDTO

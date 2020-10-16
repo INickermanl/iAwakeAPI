@@ -1,30 +1,33 @@
-package com.nickerman.test3.fragments.login
+package com.nickerman.test3.fragments.media.program
 
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.bl.common.mvp.login.MediaFreePresenter
-import com.example.bl.common.mvp.login.view.LoginView
+import com.example.bl.common.mvp.login.ProgramListPresenter
+import com.example.bl.common.mvp.login.view.ProgramListView
 import com.example.domain.dto.media_test.MediaResponse
-import com.example.domain.dto.media_test.Playlists
 import com.example.domain.dto.media_test.Program
 import com.example.utils.extentions.visible
+import com.example.utils.gone
 import com.nickerman.test3.AbstractApplication
 import com.nickerman.test3.R
 import com.nickerman.test3.fragments.common.list.AbstractListFragment
-import com.nickerman.test3.fragments.login.widget.FreeMediaListItemWidget
+import com.nickerman.test3.fragments.media.program.widget.ProgramListItemWidget
 import com.nickerman.test3.ui.adapter.holder.ListItemViewHolder
 import kotlinx.android.synthetic.main.empty_view.*
 import kotlinx.android.synthetic.main.fragment_media_free.*
 import moxy.ktx.moxyPresenter
 import javax.inject.Inject
+import javax.inject.Provider
 
-class MediaFreeListFragment @Inject constructor() :
-    AbstractListFragment<Program, MediaFreePresenter>(R.layout.fragment_media_free),
-    LoginView {
+class ProgramListFragment @Inject constructor() :
+    AbstractListFragment<Program, ProgramListPresenter>(R.layout.fragment_media_free),
+    ProgramListView {
+    @Inject
+    internal lateinit var programListItemWidget: Provider<ProgramListItemWidget>
 
-    override val presenter: MediaFreePresenter by moxyPresenter { presenterProvider.get() }
+    override val presenter: ProgramListPresenter by moxyPresenter { presenterProvider.get() }
 
     private var adapter = ListAdapter(emptyList())
 
@@ -38,13 +41,13 @@ class MediaFreeListFragment @Inject constructor() :
         initAdapter()
     }
 
-    override fun showList(mediaResponse: MediaResponse) {
-        if (mediaResponse.programs.isNullOrEmpty()) {
-            emptyView.visible()
+    override fun showList(mediaResponse: MediaResponse?) {
+        if (!mediaResponse?.programs.isNullOrEmpty()) {
+            emptyView.gone()
+            adapter.list = mediaResponse?.programs ?: emptyList()
         } else {
-            adapter.list = mediaResponse.programs ?: emptyList()
+            emptyView.visible()
         }
-
     }
 
     private fun initAdapter() {
@@ -54,5 +57,5 @@ class MediaFreeListFragment @Inject constructor() :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup): ListItemViewHolder<Program> =
-        FreeMediaListItemWidget().getHolder(parent)
+        programListItemWidget.get().getHolder(parent) { presenter.navigateToPlayList(it) }
 }
