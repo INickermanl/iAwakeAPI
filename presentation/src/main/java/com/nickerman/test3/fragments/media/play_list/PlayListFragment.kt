@@ -1,9 +1,7 @@
 package com.nickerman.test3.fragments.media.play_list
 
 import android.media.AudioAttributes
-import android.media.AudioManager
 import android.media.MediaPlayer
-import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
@@ -12,12 +10,11 @@ import com.example.bl.common.mvp.main.PlayListPresenter
 import com.example.bl.common.mvp.main.view.PlayListView
 import com.example.bl.common.navigation.PlayListScreen
 import com.example.domain.dto.media_test.Track
-import com.example.utils.getClick
 import com.example.utils.gone
 import com.example.utils.visible
 import com.nickerman.test3.AbstractApplication
 import com.nickerman.test3.R
-import com.nickerman.test3.fragments.common.list.AbstractListFragment
+import com.nickerman.test3.ui.common.fragment.list.AbstractListFragment
 import com.nickerman.test3.fragments.media.play_list.widget.PlayListItemWidget
 import com.nickerman.test3.ui.adapter.holder.ListItemViewHolder
 import kotlinx.android.synthetic.main.empty_view.*
@@ -25,9 +22,7 @@ import kotlinx.android.synthetic.main.fragment_play_list.*
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import moxy.ktx.moxyPresenter
-import retrofit2.http.Url
 import timber.log.Timber
-import java.net.URI
 import java.util.*
 import javax.inject.Inject
 import javax.inject.Provider

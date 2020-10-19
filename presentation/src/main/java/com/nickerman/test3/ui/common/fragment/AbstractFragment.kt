@@ -1,4 +1,4 @@
-package com.nickerman.test3.fragments.common
+package com.nickerman.test3.ui.common.fragment
 
 import android.os.Bundle
 import android.view.View

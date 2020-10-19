@@ -1,9 +1,9 @@
-package com.nickerman.test3.fragments.common.list
+package com.nickerman.test3.ui.common.fragment.list
 
 import android.view.ViewGroup
 import androidx.annotation.LayoutRes
 import com.example.bl.common.moxy.AbstractPresenter
-import com.nickerman.test3.fragments.common.AbstractScreenFragment
+import com.nickerman.test3.ui.common.fragment.AbstractScreenFragment
 import com.nickerman.test3.ui.adapter.AbstractListAdapter
 import com.nickerman.test3.ui.adapter.holder.ListItemViewHolder
 

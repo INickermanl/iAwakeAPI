@@ -12,7 +12,7 @@ import com.example.utils.extentions.visible
 import com.example.utils.gone
 import com.nickerman.test3.AbstractApplication
 import com.nickerman.test3.R
-import com.nickerman.test3.fragments.common.list.AbstractListFragment
+import com.nickerman.test3.ui.common.fragment.list.AbstractListFragment
 import com.nickerman.test3.fragments.media.program.widget.ProgramListItemWidget
 import com.nickerman.test3.ui.adapter.holder.ListItemViewHolder
 import kotlinx.android.synthetic.main.empty_view.*

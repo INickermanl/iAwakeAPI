@@ -1,4 +1,4 @@
-package com.nickerman.test3.activity.common
+package com.nickerman.test3.ui.common.activity
 
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity

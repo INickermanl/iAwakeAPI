@@ -5,7 +5,7 @@ import com.example.bl.common.navigation.BackButtonListener
 import com.example.bl.common.navigation.ProgramListScreen
 import com.nickerman.test3.AbstractApplication
 import com.nickerman.test3.R
-import com.nickerman.test3.activity.common.AbstractActivity
+import com.nickerman.test3.ui.common.activity.AbstractActivity
 import com.nickerman.test3.navigation.NavigationManagerImpl
 import ru.terrakok.cicerone.NavigatorHolder
 import ru.terrakok.cicerone.commands.Replace

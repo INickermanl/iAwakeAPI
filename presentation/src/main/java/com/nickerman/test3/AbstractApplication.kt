@@ -2,7 +2,7 @@ package com.nickerman.test3
 
 import android.app.Application
 import com.example.utils.di.UtilsComponentProvider
-import com.nickerman.test3.activity.common.AbstractActivity
+import com.nickerman.test3.ui.common.activity.AbstractActivity
 import com.nickerman.test3.di.ApplicationComponent
 import com.nickerman.test3.di.DaggerApplicationComponent
 import com.nickerman.test3.di.modules.ApplicationModule
