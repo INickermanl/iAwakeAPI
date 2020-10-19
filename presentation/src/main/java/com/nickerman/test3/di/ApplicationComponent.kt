@@ -1,5 +1,6 @@
 package com.nickerman.test3.di
 
+import com.example.utils.di.UtilsComponent
 import com.nickerman.test3.AbstractApplication
 import com.nickerman.test3.activity.MainActivity
 import com.nickerman.test3.di.modules.ApplicationModule
@@ -21,7 +22,7 @@ import javax.inject.Singleton
         UseCaseModule::class,
         UiModule::class]
 )
-interface ApplicationComponent {
+interface ApplicationComponent: UtilsComponent {
     val navigationSubComponentFactory: NavigationSubComponent.Factory
     fun inject(application: AbstractApplication)
     fun inject(mainActivity: MainActivity)

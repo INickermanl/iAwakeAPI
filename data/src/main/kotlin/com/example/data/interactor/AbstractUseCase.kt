@@ -16,7 +16,7 @@ abstract class AbstractUseCase : UseCase {
         doThat: suspend () -> T
     ): Result<T> {
         return try {
-            withContext(Dispatchers.IO) { throw /*Success(doThat())*/ }
+            withContext(Dispatchers.IO) { Success(doThat()) }
         } catch (e: Exception) {
             if (onError(e)) errorHandler.handle(e)
             Failure(e)

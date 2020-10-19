@@ -7,25 +7,35 @@ plugins {
 android {
     defaultPublishConfig("debug")
 
-    compileSdkVersion(Apps.compileSdk)
-    buildToolsVersion(Apps.buildToolsVersion)
+    compileSdkVersion(AndroidConfig.compileSdkVersion)
+    buildToolsVersion(AndroidConfig.buildToolsVersion)
+
+
+    defaultConfig {
+        minSdkVersion(AndroidConfig.minSdkVersion)
+        targetSdkVersion(AndroidConfig.targetSdkVersion)
+        multiDexEnabled = true
+        versionCode = AndroidConfig.versionCode
+        versionName = projectVersion
+    }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
-    buildFeatures {
-        dataBinding = false
-    }
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8.toString()
+        jvmTarget = javaVersion
+    }
+
+    buildFeatures {
+        dataBinding = false
     }
 }
 
 dependencies {
-    implementation(Libs.kotlin)
-    implementation(Libs.appcompat)
+    implementation(Dependencies.kotlin_jdk)
+    implementation(Dependencies.appcompat)
     implementation(Dependencies.recyclerView)
     implementation(Dependencies.constraint)
     implementation(Dependencies.biometric)

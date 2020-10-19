@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/default_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <include layout="@layout/dialog_title" />
+  <TextView
+      android:id="@+id/dialogText"
+      style="@style/default_dialog_text"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+  <CheckBox
+      android:id="@+id/dontShowAgain"
+      style="@style/dialog_checkbox"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@android:color/transparent"
+      android:text="@string/dont_show_again"
+      android:visibility="gone"
+      tools:visibility="visible" />
+  <include
+      layout="@layout/dialog_vertical_button_panel"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="8dp" />
+</LinearLayout>

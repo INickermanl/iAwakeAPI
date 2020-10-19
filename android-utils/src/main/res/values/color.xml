@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="colorSecondary">#1590F1</color>
+    <color name="colorAccent">#1590F1</color>
+    <color name="colorPrimary">#29CF5B</color>
+    <color name="colorPrimaryDark">#1E8B3F</color>
+    <color name="colorIndicator">@color/colorPrimary</color>
+    <color name="colorAlarm">#D80027</color>
+    <color name="dialogBackground">#FAFAFA</color>
+    <color name="dialog_title_background">#1590F1</color>
+    <color name="dialog_button_pressed">#E8E8E8</color>
+    <color name="dialog_button_primary_focused">#F8F8F8</color>
+
+    <color name="dialog_button_background_pressed">#F8F8F8</color>
+    <color name="dialog_button_background_focused">#F8F8F8</color>
+    <color name="dialog_button_background">#00000000</color>
+
+    <color name="dialog_button_ok_color">#1590F1</color>
+    <color name="dialog_button_ok_disable_color">@color/dialog_button_ok_color</color>
+    <color name="dialog_button_cancel_color">#1590F1</color>
+    <color name="dialog_title_text">#000000</color>
+    <color name="dialog_text">#717171</color>
+    <color name="dialog_content_background">#FFFFFF</color>
+
+    <color name="popup_button_title_bg">#000000</color>
+    <color name="black_text">#2F2F2F</color>
+    <color name="popup_button_panel_bg">#000000</color>
+    <color name="popup_button_bg">#C0C0C0</color>
+    <color name="popup_button_text_common">#000000</color>
+    <color name="popup_button_title">#FFFFFF</color>
+    <color name="popup_button_selected">#FFFFFF</color>
+    <color name="popup_button_selected_background">#C0C0C0</color>
+    <color name="popup_button_disabled">#ffffff</color>
+    <color name="popup_button_pressed">#A0A0A0</color>
+    <color name="stateTextColor">#A1A1A1</color>
+    <color name="popup_counter">#E5001B</color>
+
+    <color name="searchedTextColor">#a1b96f</color>
+    <color name="inputBorder">#C4C4C4</color>
+    <color name="labelBackgroundColor">#CCB3C1C6</color>
+    <color name="negativeBalanceColor">#EA001C</color>
+
+    <color name="card_part_input_text">#FFF</color>
+    <color name="card_part_input_hint">#8FFF</color>
+
+    <color name="hint_color">#42000000</color>
+    <color name="depositProgramActiveOptionTextColor">#4b4b4b</color>
+    <color name="depositProgramDisabledOptionTextColor">#4b4b4b</color>
+    <color name="warning_color">#f4511e</color>
+    <color name="success_color">#009688</color>
+    <color name="field_background">#F2F5F6</color>
+
+    <color name="header_background">#00000000</color>
+    <color name="check_box_enabled_color">#009688</color>
+    <color name="tabStroke">#80124E60</color>
+</resources>

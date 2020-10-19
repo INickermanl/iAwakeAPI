@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="rectangle">
+  <solid android:color="@color/popup_button_pressed"/>
+  <corners
+      android:radius="@dimen/dialog_item_radius"
+      android:bottomRightRadius="@dimen/dialog_item_radius"
+      android:bottomLeftRadius="@dimen/dialog_item_radius"
+      android:topLeftRadius="@dimen/dialog_item_radius"
+      android:topRightRadius="@dimen/dialog_item_radius"/>
+</shape>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="OptionsAnimations">
+        <item name="android:windowEnterAnimation">@anim/opt_show</item>
+        <item name="android:windowExitAnimation">@anim/opt_hide</item>
+    </style>
+
+    <style name="OptionsDialogTheme" parent="Theme.AppCompat.DayNight.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="OptionsRadioButtonDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="CustomDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="InputDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="default_dialog">
+        <item name="android:orientation">vertical</item>
+        <item name="android:minWidth">300dp</item>
+        <item name="android:background">@drawable/dialog_background</item>
+    </style>
+
+    <style name="LightListPopupMenuLayoutStyle" parent="Widget.AppCompat.Light.ListPopupWindow" />
+
+    <style name="default_dialog_text">
+        <item name="android:paddingTop">@dimen/dialogPadding</item>
+        <item name="android:paddingLeft">@dimen/dialogPadding</item>
+        <item name="android:paddingRight">@dimen/dialogPadding</item>
+        <item name="android:gravity">left|top</item>
+        <item name="android:textColor">@color/dialog_text</item>
+        <item name="android:paddingBottom">@dimen/dialogTitlePadding</item>
+    </style>
+
+    <style name="default_dialog_button_panel">
+        <item name="android:paddingRight">@dimen/dialogTitlePadding</item>
+        <item name="android:paddingTop">@dimen/dialogButtonVerticalPadding</item>
+        <item name="android:paddingBottom">@dimen/dialogButtonVerticalPadding</item>
+        <item name="android:paddingLeft">@dimen/dialogTitlePadding</item>
+        <item name="android:gravity">end|center_vertical</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+
+    <style name="TabLowerCaseTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="default_dialog_button">
+        <item name="android:background">@drawable/dialog_button_background</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:minWidth">@dimen/dialogButtonMinWidth</item>
+        <item name="android:paddingLeft">@dimen/dialogButtonHorizontalPadding</item>
+        <item name="android:paddingRight">@dimen/dialogButtonHorizontalPadding</item>
+        <item name="android:textSize">@dimen/dialogButtonTextSize</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:gravity">end|center_vertical</item>
+    </style>
+
+    <style name="default_popup_panel_image">
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginBottom">4dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+    </style>
+
+    <style name="default_popup_panel_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/popup_button_text_common</item>
+        <item name="android:minHeight">?android:attr/listPreferredItemHeightSmall</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceListItemSmall</item>
+    </style>
+
+    <style name="default_popup_panel_counter">
+        <item name="android:gravity">center</item>
+        <item name="android:minWidth">28dp</item>
+        <item name="android:paddingStart">6dp</item>
+        <item name="android:paddingEnd">6dp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/background_popup_counter</item>
+    </style>
+
+    <style name="default_dialog_radio_button_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:textColor">@color/popup_button_text_common</item>
+        <item name="android:minHeight">?android:attr/listPreferredItemHeightSmall</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceListItemSmall</item>
+    </style>
+
+    <style name="default_dialog_radio_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+    </style>
+
+    <style name="dialog_title">
+        <item name="android:gravity">left|top</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/dialogTitleTextSize</item>
+        <item name="android:textColor">@color/dialog_title_text</item>
+        <item name="android:paddingTop">@dimen/dialogTitlePadding</item>
+        <item name="android:paddingLeft">@dimen/dialogPadding</item>
+        <item name="android:paddingRight">@dimen/dialogPadding</item>
+        <item name="android:paddingBottom">@dimen/dialogTitlePaddingBottom</item>
+    </style>
+
+    <style name="pinDialogTitle">
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#5b5959</item>
+    </style>
+
+    <style name="header_layout_containers" />
+
+    <style name="header_container">
+        <item name="cardCornerRadius">0dp</item>
+        <item name="cardElevation">@dimen/header_elevation</item>
+    </style>
+
+    <style name="headerTitle">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="default_popup_panel_container">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@drawable/popup_button_bg</item>
+    </style>
+
+    <style name="header_empty_button">
+        <item name="android:layout_width">@dimen/header_button_width</item>
+        <item name="android:layout_height">@dimen/header_button_height</item>
+    </style>
+
+    <style name="default_popup_panel_devider">
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="default_dialog_radio_button_container" />
+
+    <style name="default_dialog_button_ok" parent="default_dialog_button">
+        <item name="android:textColor">@drawable/dialog_button_ok</item>
+        <item name="android:layout_marginLeft">@dimen/dialogButtonMargin</item>
+    </style>
+
+    <style name="default_dialog_button_ok_layout" parent="default_dialog_button_ok">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/dialogButtonHeight</item>
+    </style>
+
+    <style name="default_dialog_button_cancel" parent="default_dialog_button">
+        <item name="android:textColor">@drawable/dialog_button_cancel</item>
+    </style>
+
+    <style name="default_dialog_button_cancel_layout" parent="default_dialog_button_cancel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/dialogButtonHeight</item>
+    </style>
+
+    <style name="dialog_checkbox">
+        <item name="android:layout_marginLeft">@dimen/dialogPadding</item>
+        <item name="android:layout_marginRight">@dimen/dialogPadding</item>
+        <item name="android:textColor">@color/dialog_text</item>
+        <item name="android:textSize">@dimen/dialogCheckboxTextSize</item>
+    </style>
+
+    <style name="DefaultInputPanelStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:textColor">#6d6d6d</item>
+        <item name="android:background">@drawable/input_panel_background</item>
+    </style>
+
+    <style name="MaterialInputPanelStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#6d6d6d</item>
+    </style>
+
+    <style name="MaterialInputFieldStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#6d6d6d</item>
+    </style>
+
+    <style name="default_input_dialog" />
+
+    <style name="header_button">
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:layout_width">@dimen/header_button_width</item>
+        <item name="android:layout_height">@dimen/header_button_height</item>
+    </style>
+
+    <style name="default_dialog_single_alert_button" parent="default_dialog_button_ok" />
+
+    <declare-styleable name="BlurringView">
+        <attr name="blurringRadius" format="integer" />
+        <attr name="downScaleFactor" format="integer" />
+        <attr name="overlayColor" format="color" />
+        <attr name="allowFallback" format="boolean" />
+        <attr name="debug" format="boolean" />
+    </declare-styleable>
+    <item name="blurring_view" type="id" />
+
+    <style name="DialogSlideAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up_dialog</item>
+        <item name="android:windowExitAnimation">@anim/slide_down_dialog</item>
+    </style>
+
+    <style name="EtsyBlurAlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowAnimationStyle">@style/DialogSlideAnimation</item>
+    </style>
+
+    <style name="EtsyBlurDialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <!-- forces Dialog view to be expanded to full screen -->
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowAnimationStyle">@style/DialogSlideAnimation</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+    </style>
+
+    <style name="TextAppearance.MaterialCalendarWidget.Header" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ShapeCircle">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="DialogsTabsBar" />
+
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:textColorPrimaryInverse">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/labelBackgroundColor</item>
+    </style>
+
+    <style name="TextAppearance.MaterialCalendarWidget.WeekDay" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textSize">12sp</item>
+    </style>
+</resources>

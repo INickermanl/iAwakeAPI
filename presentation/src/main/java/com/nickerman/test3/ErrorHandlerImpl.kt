@@ -1,15 +1,23 @@
 package com.nickerman.test3
 
+import android.content.Context
+import android.os.Handler
+import android.os.Looper
 import com.example.domain.ErrorHandler
 import com.example.domain.core.exseptions.NotSupportedExseption
+import com.example.utils.dialog.CustomDialog
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import timber.log.Timber
 import javax.inject.Inject
+import javax.inject.Provider
 
 class ErrorHandlerImpl @Inject constructor() : ErrorHandler {
     @Inject
     lateinit var uiContext: CoroutineDispatcher
+
+    @Inject
+    lateinit var ctxProvider: Provider<Context>
 
     override suspend fun handle(throwable: Throwable) {
         withContext(uiContext) {
@@ -27,8 +35,11 @@ class ErrorHandlerImpl @Inject constructor() : ErrorHandler {
     }
 
     private fun processUnknownException() {
-        //TODO
-//        CustomDialog.Builder(ctxProvider.get()).isAlert().setText(R.string.unknownError).build().show()
+        CustomDialog.Builder(AbstractApplication.instance.currentActivity)
+            .setText(R.string.unknownError)
+            .isAlert()
+            .build().show()
+
     }
 
 }

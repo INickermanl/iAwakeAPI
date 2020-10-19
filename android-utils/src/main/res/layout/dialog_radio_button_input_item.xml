@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/option_dialog_container"
+    style="@style/default_dialog_radio_button_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+  <LinearLayout
+      android:id="@+id/radioButtonInputContainer"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal">
+    <RadioButton
+        android:id="@android:id/button1"
+        style="@style/default_dialog_radio_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:clickable="false"
+        android:focusable="false" />
+    <TextView
+        android:id="@android:id/text1"
+        style="@style/default_dialog_radio_button_text"
+        android:text="@string/enterVatPercent" />
+  </LinearLayout>
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/dialogInputContainer"
+      style="@style/MaterialInputPanelStyle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:layout_marginEnd="16dp"
+      android:hint="@string/enterVatPercent"
+      android:visibility="gone"
+      app:boxCornerRadiusBottomEnd="6dp"
+      app:boxCornerRadiusBottomStart="6dp"
+      app:boxCornerRadiusTopEnd="6dp"
+      app:boxCornerRadiusTopStart="6dp">
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/dialogInputPanel"
+        style="@style/MaterialInputFieldStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:maxLength="6"
+        android:textSize="13sp" />
+  </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>

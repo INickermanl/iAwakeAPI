@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dialogOk"
+    style="@style/default_dialog_button_ok_layout"
+    android:text="@string/dialog_ok"/>

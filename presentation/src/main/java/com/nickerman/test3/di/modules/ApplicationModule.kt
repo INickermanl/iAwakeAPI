@@ -4,11 +4,13 @@ import android.content.Context
 import android.media.MediaPlayer
 import com.example.data.services.MediaServiceAPI
 import com.example.domain.ErrorHandler
+import com.example.utils.dialog.DialogQueueManager
 import com.nickerman.test3.AbstractApplication
 import com.nickerman.test3.BuildConfig
 import com.nickerman.test3.ErrorHandlerImpl
 import com.nickerman.test3.navigation.FragmentProvider
 import com.nickerman.test3.navigation.FragmentProviderImpl
+import com.nickerman.test3.ui.dialog.DialogQueueManagerImpl
 import dagger.Module
 import dagger.Provides
 import kotlinx.coroutines.CoroutineDispatcher
@@ -59,6 +61,10 @@ class ApplicationModule(application: AbstractApplication) {
     @Provides
     @Singleton
     fun provideMediaPlayer(): MediaPlayer = MediaPlayer()
+
+    @Provides
+    @Singleton
+    fun provideDialogQueueManager(manager: DialogQueueManagerImpl): DialogQueueManager = manager
 
 
 }

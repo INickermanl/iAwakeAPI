@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="ok">Ок</string>
+  <string name="dialog_ok">Ок</string>
+  <string name="cancel">Отменить</string>
+  <string name="dialog_cancel">Отменить</string>
+  <string name="yes">Да</string>
+  <string name="no">Нет</string>
+  <string name="sign_in">Вход</string>
+  <string name="defaultDialogTitle">Title</string>
+  <string name="allow_geolocation">Включите геолокацию, чтобы разрешить программе определять вашу геопозицию</string>
+  <string name="stringLengthMastBeMost">Длина поля должна быть более</string>
+  <string name="stringLengthMastBeMost2">символов.</string>
+  <string name="required">Поле обязательно для заполнения</string>
+  <string name="rangeInputedVat">Введенное значение должно быть в диапазоне от %1$s до %2$s</string>
+  <string name="dont_show_again">Не показывать снова</string>
+  <string name="validInputSymbols" translatable="false">a-zA-Zа-яА-Я0-9ҐґЄєІіЇї| |</string>
+  <string name="validPassportInputSymbols" translatable="false">а-яА-Я0-9ҐґЄєІіЇї</string>
+  <string name="specialInputSymbols" translatable="false">~!@#\$%\^&amp;\*\(\)_\+"'\{\}\[\]\-,\.:;</string>
+
+
+  <string name="month">мес.</string>
+  <string name="year">год</string>
+  <string name="space" translatable="false">%1$s %2$s</string>
+
+  <string name="fingerprint">Fingerprint</string>
+  <string name="fromWithParam">от %1$s</string>
+  <string name="toWithParam">до %1$s</string>
+  <string name="from">От</string>
+  <string name="to">До</string>
+  <string name="enable_fingerprint_question">Включить вход с помощью сенсора отпечатка пальца?</string>
+
+  <string name="registration_fingerprint">отпечаток пальца</string>
+  <string name="enable_fingerprint">Включить Fingerprint</string>
+  <string name="disable_fingerprint">Выключить Fingerprint</string>
+  <string name="fingerprint_description">Подтверждение входа отпечатком пальца</string>
+  <string name="fingerprint_hint">Коснитесь сенсора</string>
+  <string name="fingerprint_success">Отпечаток пальца распознан</string>
+  <string name="manualInput">Ввести вручную</string>
+  <string name="enterVatPercent">Указать свой процент</string>
+
+  <string name="fingerprint_acquired_imager_dirty">Очистите сканер и повторите попытку</string>
+  <string name="fingerprint_acquired_insufficient">Не удалось распознать отпечаток. Повторите попытку</string>
+  <string name="fingerprint_acquired_partial">Отсканирована только часть пальца. Повторите попытку</string>
+  <string name="fingerprint_acquired_too_fast">Вы слишком быстро убрали палец. Повторите попытку</string>
+  <string name="fingerprint_acquired_too_slow">Вы перемещали палец слишком медленно. Повторите попытку</string>
+  <string name="fingerprint_error_canceled">Операция с отпечатком отменена</string>
+  <string name="fingerprint_error_hw_not_available">Сканер недоступен</string>
+  <string name="fingerprint_error_lockout">Слишком много попыток. Повторите позже</string>
+  <string name="fingerprint_error_no_space">Чтобы сохранить новый отпечаток, удалите существующий</string>
+  <string name="fingerprint_error_timeout">Превышено время ожидания. Повторите попытку</string>
+  <string name="fingerprint_error_unable_to_process">Повторите попытку</string>
+  <string name="fingerprint_not_recognized">Не распознано</string>
+  <string name="fingerprints">Отпечатки:</string>
+
+  <string name="previous">Go to previous</string>
+  <string name="next">Go to next</string>
+  <string name="calendar">Calendar</string>
+</resources>

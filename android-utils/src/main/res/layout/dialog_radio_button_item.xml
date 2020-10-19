@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/option_dialog_container"
+    style="@style/default_dialog_radio_button_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+  <RadioButton
+      android:id="@android:id/button1"
+      style="@style/default_dialog_radio_button"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:clickable="false"/>
+  <TextView
+      android:id="@android:id/text1"
+      style="@style/default_dialog_radio_button_text"
+      tools:text="Button title"/>
+</LinearLayout>

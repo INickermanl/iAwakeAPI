@@ -5,7 +5,7 @@ plugins {
 
 val compileKotlin: org.jetbrains.kotlin.gradle.tasks.KotlinCompile by tasks
 compileKotlin.kotlinOptions {
-    allWarningsAsErrors = isWarningsAsErrorsConfig
+//    allWarningsAsErrors = isWarningsAsErrorsConfig
     jvmTarget = javaVersion
 }
 

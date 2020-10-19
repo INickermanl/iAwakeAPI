@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="match_parent" format="integer" type="dimen">-1</item>
+    <item name="wrap_content" format="integer" type="dimen">-2</item>
+
+    <dimen name="dialogTitlePadding">16dp</dimen>
+    <dimen name="dialogPadding">24dp</dimen>
+    <dimen name="dialogButtonHeight">24dp</dimen>
+    <dimen name="dialogButtonVerticalPadding">6dp</dimen>
+    <dimen name="dialogButtonMargin">8dp</dimen>
+    <dimen name="dialogButtonMinWidth">64dp</dimen>
+    <dimen name="dialogButtonHorizontalPadding">8dp</dimen>
+    <dimen name="dialogTitlePaddingBottom">0dp</dimen>
+    <dimen name="dialogTitleTextSize">22sp</dimen>
+    <dimen name="dialogButtonTextSize">14sp</dimen>
+    <dimen name="dialogCheckboxTextSize">10sp</dimen>
+
+    <item name="carousel_semitransparent_coef" format="float" type="dimen">0.1</item>
+    <dimen name="carousel_pager_width">256dp</dimen>
+    <dimen name="carousel_pager_margin">5dp</dimen>
+    <item name="carousel_alpha" format="float" type="dimen">0.25</item>
+    <item name="carousel_coef" format="float" type="dimen">0.375</item>
+    <dimen name="carousel_translate_x">20dp</dimen>
+    <dimen name="carousel_translate_y">30dp</dimen>
+
+    <dimen name="header_button_width">34dp</dimen>
+    <dimen name="header_button_height">34dp</dimen>
+
+    <dimen name="card_part_input_height">26dp</dimen>
+    <dimen name="card_part_input_text_size">15sp</dimen>
+    <dimen name="pin_code_part_input_height">25dp</dimen>
+
+    <dimen name="popup_button_vertical_margin">2dp</dimen>
+    <dimen name="popup_button_horizontal_margin">4dp</dimen>
+
+    <dimen name="header_elevation">4dp</dimen>
+
+    <dimen name="fab_size_normal">56dp</dimen>
+    <dimen name="fab_size_mini">40dp</dimen>
+    <dimen name="labels_text_size">14sp</dimen>
+
+    <dimen name="dialog_button_padding">6dp</dimen>
+    <dimen name="dialog_item_radius">8dp</dimen>
+
+    <dimen name="dialog_radius_left">8dp</dimen>
+    <dimen name="dialog_radius_right">8dp</dimen>
+    <dimen name="dialog_radius_top">8dp</dimen>
+    <dimen name="dialog_radius_bottom">8dp</dimen>
+    <bool name="dialogTextAllCaps">false</bool>
+    <integer name="horizontal_dialog_buttons_max_length">10</integer>
+
+    <dimen name="mcv_arrow_padding">4dp</dimen>
+    <dimen name="mcv_arrow_margin">4dp</dimen>
+
+    <dimen name="ifobs_page_indicator_view_size">8dp</dimen>
+    <dimen name="ifobs_page_indicator_view_offset">10dp</dimen>
+    <integer name="ifobs_page_indicator_view_animation_duration">200</integer>
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/inputDialogContainer"
+    style="@style/default_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <include layout="@layout/dialog_title"/>
+  <TextView
+      android:id="@+id/inputDialogMessage"
+      style="@style/default_dialog_text"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingLeft="16dp"
+      android:paddingTop="16dp"
+      android:paddingRight="16dp"
+      android:visibility="gone"
+      tools:text="Message"
+      tools:visibility="visible"/>
+  <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="1dp"
+      android:background="@color/dialog_content_background"
+      android:orientation="vertical"
+      android:paddingLeft="@dimen/dialogPadding"
+      android:paddingTop="@dimen/dialogPadding"
+      android:paddingRight="@dimen/dialogPadding"
+      android:paddingBottom="30dp">
+    <EditText
+        android:id="@+id/inputDialogText"
+        style="@style/default_input_dialog"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"/>
+    <TextView
+        android:id="@+id/customErrorMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+  </LinearLayout>
+  <include layout="@layout/dialog_button_panel"/>
+</LinearLayout>

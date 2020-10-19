@@ -1,5 +1,5 @@
 const val projectVersion: String = "1.0"
-const val kotlinVersion: String = "1.4.0"
+const val kotlinVersion: String = "1.4.10"
 const val isWarningsAsErrorsConfig = true
 const val javaVersion = "1.8"
 
@@ -8,7 +8,7 @@ object AndroidConfig {
     const val minSdkVersion = 21
     const val targetSdkVersion = 29
     const val compileSdkVersion = 29
-    val versionCode = "1"
+    const val versionCode = 1
     const val testInstRunner = "android.support.test.runner.AndroidJUnitRunner"
 }
 
