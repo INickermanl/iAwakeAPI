@@ -1,10 +1,8 @@
 package com.nickerman.test3
 
 import android.content.Context
-import android.os.Handler
-import android.os.Looper
 import com.example.domain.ErrorHandler
-import com.example.domain.core.exseptions.NotSupportedExseption
+import com.example.domain.core.exseptions.NotSupportedException
 import com.example.utils.dialog.CustomDialog
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
@@ -29,7 +27,7 @@ class ErrorHandlerImpl @Inject constructor() : ErrorHandler {
         Timber.i("Handle Error $throwable $isNeedProcess")
         if (!isNeedProcess) return
         when (throwable) {
-            is NotSupportedExseption -> processUnknownException()
+            is NotSupportedException -> processUnknownException()
             else -> processUnknownException()
         }
     }
