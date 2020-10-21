@@ -114,11 +114,6 @@ android {
             )
         }
         get("debug").apply {
-            buildConfigField(
-                "String", "TEST_API", "\"http://kolyan-example.herokuapp.com\""
-            )
-        }
-        get("debug").apply {
             buildConfigField("Boolean", "DEBUG_BUILD_TYPE", "true")
         }
         get("release").apply {

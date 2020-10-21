@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
     <domain-config cleartextTrafficPermitted="true">
-        <domain includeSubdomains="true">kolyan-example.herokuapp.com</domain>
-        <domain includeSubdomains="true">https://api.iawaketechnologies.com</domain>
+        <domain includeSubdomains="true">api.iawaketechnologies.com</domain>
     </domain-config>
 </network-security-config>

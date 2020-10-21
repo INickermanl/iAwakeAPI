@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Test3</string>
+    <string name="app_name">iAwake API</string>
     <string name="back">back</string>
     <string name="emptyView">Empty list</string>
     <string name="resume">resume</string>
