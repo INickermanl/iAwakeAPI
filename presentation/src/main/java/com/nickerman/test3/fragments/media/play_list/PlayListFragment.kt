@@ -1,7 +1,5 @@
 package com.nickerman.test3.fragments.media.play_list
 
-import android.media.AudioAttributes
-import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
@@ -14,34 +12,19 @@ import com.example.utils.gone
 import com.example.utils.visible
 import com.nickerman.test3.AbstractApplication
 import com.nickerman.test3.R
-import com.nickerman.test3.ui.common.fragment.list.AbstractListFragment
 import com.nickerman.test3.fragments.media.play_list.widget.PlayListItemWidget
 import com.nickerman.test3.ui.adapter.holder.ListItemViewHolder
+import com.nickerman.test3.ui.common.fragment.list.AbstractListFragment
 import kotlinx.android.synthetic.main.empty_view.*
 import kotlinx.android.synthetic.main.fragment_play_list.*
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import moxy.ktx.moxyPresenter
-import timber.log.Timber
-import java.util.*
-import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 import javax.inject.Provider
-import kotlin.concurrent.schedule
 
 class PlayListFragment @Inject constructor() :
-    AbstractListFragment<Track, PlayListPresenter>(R.layout.fragment_play_list), PlayListView,
-    MediaPlayer.OnPreparedListener {
+    AbstractListFragment<Track, PlayListPresenter>(R.layout.fragment_play_list), PlayListView {
     @Inject
     internal lateinit var playListWidget: Provider<PlayListItemWidget>
-
-
-    var mediaPlayer: MediaPlayer? = null
-    var needShowTime: Boolean = false
-        get() = mediaPlayer?.isPlaying ?: false
-
-    var timerTask: TimerTask? = null
 
     override val presenter: PlayListPresenter by moxyPresenter {
         presenterProvider.get().apply {
@@ -64,32 +47,9 @@ class PlayListFragment @Inject constructor() :
         initView()
     }
 
-    fun pause() {
-        if (mediaPlayer?.isPlaying == true) mediaPlayer?.pause()
-    }
-
     private fun initView() {
-        pause.setOnClickListener {
-            pause()
-        }
-        stop.setOnClickListener {
-            stopPlay()
-        }
-        resume.setOnClickListener { resumePlay() }
-    }
-
-    override fun showList(track: List<Track>?) {
-        if (!track.isNullOrEmpty()) {
-            emptyView.gone()
-            adapter.list = track
-        } else {
-            emptyView.visible()
-        }
-    }
-
-    override fun onPrepared(p0: MediaPlayer?) {
-        mediaPlayer?.start()
-        time()
+        pause.setOnClickListener { presenter.pausePlay() }
+        resume.setOnClickListener { presenter.resumePlay() }
     }
 
     private fun initAdapter() {
@@ -97,63 +57,21 @@ class PlayListFragment @Inject constructor() :
         recyclerView.adapter = adapter
     }
 
-    private fun resumePlay() {
-        if (mediaPlayer?.isPlaying == false){
-            mediaPlayer?.start()
-            time()
+    override fun showList(trackList: List<Track>?) {
+        if (!trackList.isNullOrEmpty()) {
+            emptyView.gone()
+            adapter.list = trackList
+        } else {
+            emptyView.visible()
         }
     }
 
-    private fun stopPlay() {
-        mediaPlayer?.stop()
-    }
-
-    private fun playSound(track: Track) {
-        val url = track.media?.mp3?.url
-        if (!url.isNullOrBlank()) {
-            if (mediaPlayer?.isPlaying == true) mediaPlayer?.release()
-            mediaPlayer = null
-            mediaPlayer = MediaPlayer()
-            mediaPlayer?.apply {
-                setDataSource(url)
-                Timber.i("prepareAsync");
-                setAudioAttributes(
-                    AudioAttributes.Builder()
-                        .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
-                        .setUsage(AudioAttributes.USAGE_MEDIA)
-                        .build()
-                )
-                setOnPreparedListener(this@PlayListFragment)
-                prepareAsync()
-            }
-        }
-
-    }
-
-    private fun time() {
-        CoroutineScope(Dispatchers.IO).launch {
-            timerTask = Timer("PlayTime", false).schedule(0L, 1_000L) {
-                val milliseconds = mediaPlayer?.currentPosition
-                CoroutineScope(Dispatchers.Main).launch {
-                    if (milliseconds != null)
-                        trackTime.text =
-                            TimeUnit.MILLISECONDS.toSeconds(milliseconds.toLong()).toString()
-                }
-                if (!needShowTime) {
-                    timerTask?.cancel()
-                }
-
-            }
-        }
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        mediaPlayer?.release()
+    override fun showTrackTime(time: String) {
+        trackTime.text = time
     }
 
     override fun onCreateViewHolder(parent: ViewGroup): ListItemViewHolder<Track> {
-        return playListWidget.get().getHolder(parent) { playSound(it) }
+        return playListWidget.get().getHolder(parent, { presenter.startPlay(it) }, {})
     }
 
     companion object {

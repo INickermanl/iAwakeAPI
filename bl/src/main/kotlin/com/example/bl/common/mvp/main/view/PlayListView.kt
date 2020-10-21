@@ -7,5 +7,6 @@ import moxy.viewstate.strategy.StateStrategyType
 
 @StateStrategyType(AddToEndSingleStrategy::class)
 interface PlayListView : CommonView {
-    fun showList(track: List<Track>?)
+    fun showList(trackList: List<Track>?)
+    fun showTrackTime(time: String)
 }

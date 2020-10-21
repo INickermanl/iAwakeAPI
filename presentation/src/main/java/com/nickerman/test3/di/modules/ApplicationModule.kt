@@ -4,10 +4,12 @@ import android.content.Context
 import android.media.MediaPlayer
 import com.example.data.services.MediaServiceAPI
 import com.example.domain.ErrorHandler
+import com.example.domain.interactor.MusicPlayer
 import com.example.utils.dialog.DialogQueueManager
 import com.nickerman.test3.AbstractApplication
 import com.nickerman.test3.BuildConfig
 import com.nickerman.test3.ErrorHandlerImpl
+import com.nickerman.test3.music.MusicPlayerImpl
 import com.nickerman.test3.navigation.FragmentProvider
 import com.nickerman.test3.navigation.FragmentProviderImpl
 import com.nickerman.test3.ui.dialog.DialogQueueManagerImpl
@@ -60,11 +62,15 @@ class ApplicationModule(application: AbstractApplication) {
 
     @Provides
     @Singleton
-    fun provideMediaPlayer(): MediaPlayer = MediaPlayer()
+    fun provideDialogQueueManager(manager: DialogQueueManagerImpl): DialogQueueManager = manager
 
     @Provides
     @Singleton
-    fun provideDialogQueueManager(manager: DialogQueueManagerImpl): DialogQueueManager = manager
+    fun provideMusicPlayer(musicPlayer: MusicPlayerImpl): MusicPlayer = musicPlayer
+
+    @Provides
+    @Singleton
+    fun provideMediaPlayer(): MediaPlayer = MediaPlayer()
 
 
 }

@@ -4,6 +4,7 @@
     <string name="emptyView">Empty list</string>
     <string name="resume">resume</string>
     <string name="pause">pause</string>
+    <string name="play">Play</string>
     <string name="unknownError">Unknown error</string>
     <string name="stop">stop</string>
     <string name="time">time</string>

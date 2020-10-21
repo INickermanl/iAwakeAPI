@@ -3,10 +3,12 @@ package com.example.utils.dialog
 import android.app.Dialog
 import android.content.Context
 import android.text.method.MovementMethod
-import android.view.*
+import android.view.Gravity
+import android.view.View
+import android.view.ViewGroup
+import android.view.Window
 import android.widget.Button
 import android.widget.CheckBox
-import android.widget.ScrollView
 import android.widget.TextView
 import androidx.annotation.StringRes
 import androidx.core.view.isVisible
@@ -16,7 +18,6 @@ import com.example.utils.extentions.getView
 import com.example.utils.extentions.setAppearance
 import com.nickerman.test3.utils.R
 import javax.inject.Inject
-import javax.inject.Provider
 
 
 class CustomDialog private constructor(
@@ -196,7 +197,7 @@ class CustomDialog private constructor(
     }
 
     override fun internalShow() {
-       //TODO if need show dialog
+        //TODO if need show dialog
     }
 
     override fun onDetachedFromWindow() {

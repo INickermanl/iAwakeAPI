@@ -4,10 +4,18 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+    <Button
+        android:id="@+id/playTrack"
+        style="@style/BaseMediaItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/play" />
+
     <TextView
         android:id="@+id/track"
         style="@style/BaseMediaItem"
-        android:background="@color/colorPrimaryDark"
         android:layout_width="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:padding="8dp"
         tools:text="@string/app_name" />
 </LinearLayout>
