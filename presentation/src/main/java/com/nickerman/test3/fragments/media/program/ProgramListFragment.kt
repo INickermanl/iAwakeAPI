@@ -29,7 +29,7 @@ class ProgramListFragment @Inject constructor() :
 
     override val presenter: ProgramListPresenter by moxyPresenter { presenterProvider.get() }
 
-    private var adapter = ListAdapter(emptyList())
+    private val adapter by lazy { ListAdapter(emptyList()) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         AbstractApplication.instance.mainComponent.inject(this)
