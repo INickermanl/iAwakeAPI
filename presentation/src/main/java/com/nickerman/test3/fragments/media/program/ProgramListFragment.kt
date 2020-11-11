@@ -56,6 +56,9 @@ class ProgramListFragment @Inject constructor() :
         adapter.compareItemsByIdFun = { m1, m2 -> m1.title == m2.title }
     }
 
+
+
+
     override fun onCreateViewHolder(parent: ViewGroup): ListItemViewHolder<Program> =
         programListItemWidget.get().getHolder(parent) { presenter.navigateToPlayList(it) }
 }
