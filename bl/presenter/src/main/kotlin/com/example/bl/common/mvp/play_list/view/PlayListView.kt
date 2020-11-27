@@ -1,4 +1,4 @@
-package com.example.bl.common.mvp.main.view
+package com.example.bl.common.mvp.play_list.view
 
 import com.example.bl.common.moxy.view.CommonView
 import com.example.domain.dto.media_test.Track

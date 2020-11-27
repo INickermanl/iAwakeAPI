@@ -1,55 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        tools:itemCount="5"
-        tools:listitem="@layout/widget_play_list_item" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/trackTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center|bottom"
-        android:layout_marginTop="24dp"
-        android:text="@string/time"
-        android:textColor="@android:color/black"
-        android:textSize="24sp"
-        android:textStyle="normal" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            tools:itemCount="5"
+            tools:listitem="@layout/widget_play_list_item" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal"
-        android:paddingBottom="24dp">
-
-        <Button
-            android:id="@+id/resume"
+        <TextView
+            android:id="@+id/trackTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_weight="1"
-            android:text="@string/resume"
-            android:textAllCaps="true"
-            tools:ignore="NestedWeights" />
+            android:layout_gravity="center|bottom"
+            android:layout_marginTop="24dp"
+            android:text="@string/time"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="normal" />
 
-        <Button
-            android:id="@+id/pause"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1"
-            android:text="@string/pause"
-            android:textAllCaps="true" />
+            android:orientation="horizontal"
+            android:paddingBottom="24dp">
 
+            <Button
+                android:id="@+id/resume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:text="@string/resume"
+                android:textAllCaps="true"
+                tools:ignore="NestedWeights" />
+
+            <Button
+                android:id="@+id/pause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:text="@string/pause"
+                android:textAllCaps="true" />
+
+        </LinearLayout>
+
+        <include layout="@layout/empty_view" />
     </LinearLayout>
-
-    <include layout="@layout/empty_view" />
-</LinearLayout>
+</layout>

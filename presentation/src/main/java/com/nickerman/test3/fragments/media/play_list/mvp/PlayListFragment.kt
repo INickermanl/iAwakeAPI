@@ -1,18 +1,18 @@
-package com.nickerman.test3.fragments.media.play_list
+package com.nickerman.test3.fragments.media.play_list.mvp
 
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.bl.common.mvp.main.PlayListPresenter
-import com.example.bl.common.mvp.main.view.PlayListView
+import com.example.bl.common.mvp.play_list.PlayListPresenter
+import com.example.bl.common.mvp.play_list.view.PlayListView
 import com.example.bl.common.navigation.PlayListScreen
 import com.example.domain.dto.media_test.Track
 import com.example.utils.gone
 import com.example.utils.visible
 import com.nickerman.test3.AbstractApplication
 import com.nickerman.test3.R
-import com.nickerman.test3.fragments.media.play_list.widget.PlayListItemWidget
+import com.nickerman.test3.fragments.media.play_list.mvp.widget.PlayListItemWidget
 import com.nickerman.test3.ui.adapter.holder.ListItemViewHolder
 import com.nickerman.test3.ui.common.fragment.list.AbstractListFragment
 import kotlinx.android.synthetic.main.empty_view.*
@@ -34,7 +34,7 @@ class PlayListFragment @Inject constructor() :
         }
     }
 
-    private val adapter = ListAdapter(emptyList())
+    private val adapter by lazy { ListAdapter(emptyList()) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         AbstractApplication.instance.mainComponent.inject(this)

@@ -1,7 +1,7 @@
-package com.example.bl.common.mvp.main
+package com.example.bl.common.mvp.play_list
 
 import com.example.bl.common.moxy.AbstractPresenter
-import com.example.bl.common.mvp.main.view.PlayListView
+import com.example.bl.common.mvp.play_list.view.PlayListView
 import com.example.domain.dto.media_test.Program
 import com.example.domain.dto.media_test.Track
 import com.example.domain.interactor.MusicPlayer

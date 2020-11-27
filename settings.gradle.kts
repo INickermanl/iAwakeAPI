@@ -3,7 +3,8 @@ include(
     ":domain",
     ":data",
     ":presentation",
-    ":bl",
+    ":bl:view-model",
+    ":bl:presenter",
     ":services",
     ":android-utils"
 )

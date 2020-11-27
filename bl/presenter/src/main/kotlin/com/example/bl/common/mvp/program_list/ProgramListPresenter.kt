@@ -1,7 +1,7 @@
-package com.example.bl.common.mvp.login
+package com.example.bl.common.mvp.program_list
 
 import com.example.bl.common.moxy.AbstractPresenter
-import com.example.bl.common.mvp.login.view.ProgramListView
+import com.example.bl.common.mvp.program_list.view.ProgramListView
 import com.example.bl.common.navigation.PlayListScreen
 import com.example.domain.dto.media_test.Program
 import com.example.domain.interactor.MediaServiceUseCase
