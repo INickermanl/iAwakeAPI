@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.bl.common.mvp.login.ProgramListPresenter
-import com.example.bl.common.mvp.login.view.ProgramListView
+import com.example.bl.common.mvp.program_list.ProgramListPresenter
+import com.example.bl.common.mvp.program_list.view.ProgramListView
 import com.example.domain.dto.media_test.MediaResponse
 import com.example.domain.dto.media_test.Program
 import com.example.utils.extentions.visible

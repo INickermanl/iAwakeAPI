@@ -4,6 +4,13 @@ plugins {
     `kotlin-dsl`
 }
 
+sourceSets {
+    main {
+        java.srcDirs("src")
+    }
+}
+
+
 repositories {
     jcenter()
 }

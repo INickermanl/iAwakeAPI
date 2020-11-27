@@ -1,4 +1,4 @@
-package com.nickerman.test3.fragments.media.play_list.widget
+package com.nickerman.test3.fragments.media.play_list.mvp.widget
 
 import android.view.LayoutInflater
 import android.view.View

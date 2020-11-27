@@ -1,3 +1,5 @@
+import Versions.lifeCycleVersion
+
 object Apps {
     const val compileSdk = 30
     const val buildToolsVersion = "30.0.2"
@@ -8,7 +10,7 @@ object Apps {
 }
 
 object Versions {
-    const val gradle = "4.1.0"
+    const val gradle = "4.1.1"
     const val kotlin = "1.4.10"
     const val appcompat = "1.1.0"
     const val coroutineVersion = "1.3.9"
@@ -18,6 +20,7 @@ object Versions {
     const val daggerVersion = "2.29.1"
     const val timberVersion = "4.7.1"
     const val retrofitVersion = "2.9.0"
+    const val lifeCycleVersion = "2.2.0"
 
     /* test */
     const val junit = "4.12"
@@ -29,6 +32,10 @@ object Libs {
     const val kotlin = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}"
     const val appcompat = "androidx.appcompat:appcompat:${Versions.appcompat}"
     const val coreKotlin = "androidx.core:core-ktx:${Versions.coreKotlin}"
+    // ViewModel
+    const val lifeCycleViewModel =  "androidx.lifecycle:lifecycle-viewmodel-ktx:${lifeCycleVersion}"
+    // LiveData
+    const val lifeCycleLiveDate =  "androidx.lifecycle:lifecycle-livedata-ktx:${lifeCycleVersion}"
     const val daggerAndroid =  "com.google.dagger:dagger:${Versions.daggerVersion}"
     const val daggerCompiler =  "com.google.dagger:dagger-compiler:${Versions.daggerVersion}"
     const val daggerSupport = "com.google.dagger:dagger-android-support:${Versions.daggerVersion}"

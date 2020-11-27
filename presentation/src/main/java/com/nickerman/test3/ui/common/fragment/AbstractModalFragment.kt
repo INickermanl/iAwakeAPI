@@ -2,7 +2,6 @@ package com.nickerman.test3.ui.common.fragment
 
 import android.os.Bundle
 import android.view.View
-import android.widget.ScrollView
 import androidx.annotation.ColorInt
 import androidx.annotation.ColorRes
 import androidx.annotation.IdRes
