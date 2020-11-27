@@ -19,6 +19,16 @@ allprojects {
     }
 }
 
-tasks.register("clean", Delete::class) {
+tasks.register("cleanBuildCash", Delete::class) {
+    group = "cleanup"
+    description = "delete build cash"
     delete(rootProject.buildDir)
+    delete("${rootProject.projectDir}\\bl\\build")
+    delete("${rootProject.projectDir}\\android-utils\\build")
+    delete("${rootProject.projectDir}\\data\\build")
+    delete("${rootProject.projectDir}\\domain\\build")
+    delete("${rootProject.projectDir}\\presentation\\build")
+    delete("${rootProject.projectDir}\\services\\build")
+    delete("${rootProject.projectDir}\\buildSrc\\build")
+    delete("${rootProject.projectDir}\\buildSrc\\.gradle")
 }
